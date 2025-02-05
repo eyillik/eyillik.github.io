@@ -1,1 +1,20 @@
-init
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display URL Parameter</title>
+    <script>
+        function displayUrlParameter() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const tParam = urlParams.get('t');
+            if (tParam) {
+                document.getElementById('display').innerText = tParam;
+            }
+        }
+    </script>
+</head>
+<body onload="displayUrlParameter()">
+    <h1 id="display">token:{t}</h1>
+</body>
+</html>
